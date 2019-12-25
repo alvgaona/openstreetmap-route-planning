@@ -25,7 +25,6 @@ void RouteModel::CreateNodeToRoadHashmap() {
     }
 }
 
-
 RouteModel::Node *RouteModel::Node::FindNeighbor(std::vector<int> node_indices) {
     Node *closest_node = nullptr;
     Node node;
