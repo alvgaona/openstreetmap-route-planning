@@ -1,8 +1,15 @@
+# IntelliJ IDEA
+.idea/
+
+# CMake
+build/
+bin/
+cmake-build-debug/
+lib/
+
+# Other
 *.swp
 *.osm
 *.o
 draw.cpp
 test.cpp
-build/
-bin/
-lib/
