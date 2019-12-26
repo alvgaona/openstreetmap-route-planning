@@ -68,7 +68,13 @@ TEST_F(RoutePlannerTest, TestCalculateHValue) {
     EXPECT_FLOAT_EQ(route_planner.CalculateHValue(mid_node), 0.58903033);
 }
 
-
+// Test the NextNode method
+TEST_F(RoutePlannerTest, TestNextNode) {
+  route_planner.AddNeighbors(start_node);
+  RouteModel::Node* node = route_planner.NextNode();
+  EXPECT_NE(node, nullptr);
+  EXPECT_EQ(node->g_value + node->h_value, 1.13758016f);
+}
 
 // Test the AddNeighbors method.
 bool NodesSame(RouteModel::Node* a, RouteModel::Node* b) { return a == b; }
