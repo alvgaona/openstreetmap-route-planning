@@ -28,13 +28,14 @@ static std::optional<std::vector<std::byte>> ReadFile(const std::string &path)
 }
 
 void GetUserInput(float& start_x, float& start_y, float& end_x, float& end_y) {
-  std::cout << "Please input coordinate X for start point: ";
+  // TODO: Validate coordinates are in range.
+  std::cout << "Please enter coordinate X for start point: ";
   std::cin >> start_x;
-  std::cout << "Please input coordinate Y for start point: ";
+  std::cout << "Please enter coordinate Y for start point: ";
   std::cin >> start_y;
-  std::cout << "Please input coordinate X for end point: ";
+  std::cout << "Please enter coordinate X for end point: ";
   std::cin >> end_x;
-  std::cout << "Please input coordinate Y for end point: ";
+  std::cout << "Please enter coordinate Y for end point: ";
   std::cin >> end_y;
 }
 
